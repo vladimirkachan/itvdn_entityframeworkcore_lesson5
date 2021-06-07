@@ -11,6 +11,7 @@ namespace _01
     {
         public DbSet<Company> Companies { get; set; }
         public DbSet<Phone> Phones { get; set; }
+        public DbSet<Country> Countries {get; set;}
 
         public Context()
         {
@@ -30,6 +31,7 @@ namespace _01
         public int Price { get; set; }
         public int CompanyId { get; set; }
         public Company Company { get; set; }
+        
     }
 
     public class Company
@@ -41,6 +43,7 @@ namespace _01
         {
             Phones = new List<Phone>();
         }
+        public Country Country {get; set;}
     }
 
     public class Country
