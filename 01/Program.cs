@@ -10,7 +10,7 @@ namespace _01
         static void Main(string[] args)
         {
             using var db = new Context();
-            //// Generate(db);
+            Generate(db);
             Console.WriteLine("--- FromSql: #1 ---");
 
             var companies = db.Companies.FromSqlRaw("SELECT * FROM Companies").ToList();
